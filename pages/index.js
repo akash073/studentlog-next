@@ -39,4 +39,13 @@ const Home = ({t, i18n}) => {
       </>
   )
 }
+
+Home.getInitialProps = async () => ({
+    namespacesRequired: ['common'],
+})
+
+Home.propTypes = {
+    t: PropTypes.func.isRequired,
+}
+
 export default withTranslation("common")(Home);
